@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>welcome</title>
+    </head>
+    <style>
+    body{
+         
+          margin-top:100px;
+          margin-left:350px;
+          font-family:Brush Script MT;
+    }
+    input{
+        height:80px;
+          width:700px;
+          font-size: 40px;
+    }
+    ul{
+        margin:40px;
+        font-size: 50px;
+    }
+    button{
+        height:40px;
+        width:80px;
+        padding:5px;
+    }
+    </style>
+    <body style="background-image: url(bg.jpeg);background-size:cover;">
+         <input id="one">
+         <button onclick="update() ">ADD</button>
+         <ul id="two">
+       <li style="color:yellowgreen">START  <button onclick="deletes(event)">delete</button></li>
+         </ul>
+         <script>
+            var h =document.getElementById("one")
+            var m=document.getElementById("two")
+            function update(){
+               var y=document.createElement("li");
+               y.innerHTML=h.value  +"<button onclick='deletes(event)'> delete</button>";
+               m.append(y  )
+               document.body.style.color='yellowgreen';
+
+               
+ }
+            function deletes(event)
+            {
+               event.target.parentElement.remove()
+            }
+         </script>
+    </body>
+</html>
